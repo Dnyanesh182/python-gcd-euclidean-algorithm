@@ -1,0 +1,7 @@
+# UC1 – Take Two Integer Inputs from User
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("First Number:", num1)
+print("Second Number:", num2)
