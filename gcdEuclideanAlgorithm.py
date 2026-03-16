@@ -1,15 +1,6 @@
-# UC5 – Handle Case When Both Numbers are Equal
+# UC6 – Return the GCD Value from Function
 
 def calculate_gcd(a, b):
-
-    if a == b:
-        return a
-
-    if a == 0:
-        return b
-
-    if b == 0:
-        return a
 
     while b != 0:
         a, b = b, a % b
@@ -20,6 +11,6 @@ def calculate_gcd(a, b):
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
 
-gcd = calculate_gcd(num1, num2)
+result = calculate_gcd(num1, num2)
 
-print("GCD is:", gcd)
+print("GCD of", num1, "and", num2, "is:", result)
