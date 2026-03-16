@@ -1,6 +1,9 @@
-# UC4 – Handle Case When One Number is Zero
+# UC5 – Handle Case When Both Numbers are Equal
 
 def calculate_gcd(a, b):
+
+    if a == b:
+        return a
 
     if a == 0:
         return b
