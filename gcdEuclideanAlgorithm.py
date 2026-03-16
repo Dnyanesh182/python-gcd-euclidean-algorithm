@@ -1,26 +1,14 @@
-# UC9 – Allow Multiple GCD Calculations Using Loop
+# UC10 – Optimize Function Using Recursive Approach
 
 def calculate_gcd(a, b):
-    while b != 0:
-        a, b = b, a % b
-    return a
+    if b == 0:
+        return a
+    return calculate_gcd(b, a % b)
 
 
-while True:
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
 
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
+gcd = calculate_gcd(num1, num2)
 
-    if num1 < 0 or num2 < 0:
-        print("Error: Please enter non-negative integers only.")
-        continue
-
-    gcd = calculate_gcd(num1, num2)
-
-    print(f"GCD of {num1} and {num2} is: {gcd}")
-
-    choice = input("Do you want to calculate another GCD? (yes/no): ").lower()
-
-    if choice != "yes":
-        print("Program terminated.")
-        break
+print(f"The GCD of {num1} and {num2} is: {gcd}")
